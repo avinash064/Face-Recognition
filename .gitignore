@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+face_env/
+venv/
+env/
+.env
+
+# Datasets and large files
+datasets/
+dlib_models/
+face_eval_pipeline/data/
+face_eval_pipeline/orl_faces/
+face_eval_pipeline/results/embeddings/
+face_eval_pipeline/*.tar.bz2
+face_eval_pipeline/*.tar.gz
+face_eval_pipeline/cmake-*/
+*.pkl
+*.mat
+
+# Logs
+*.log
