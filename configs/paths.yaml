@@ -1,0 +1,36 @@
+# Dataset and gallery root paths
+datasets:
+  orl:
+    gallery: "face_eval_pipeline/orl_faces/reference_gallery"
+    probe:   "face_eval_pipeline/orl_faces"
+
+  imdb:
+    gallery: "datasets/imdb_wiki/reference_gallery_imdb"
+    probe:   "datasets/imdb_wiki/imdb_crop"
+    mat:     "datasets/imdb_wiki/imdb_crop/imdb.mat"
+
+  imfdb:
+    gallery: "datasets/IMFDB FR dataset/reference_gallery"
+    probe:   "datasets/IMFDB FR dataset/IMFDB FR dataset"
+
+# Embedding output paths
+embeddings_dir: "face_eval_pipeline/results/embeddings"
+results_dir:    "face_eval_pipeline/results"
+
+# Model list
+models:
+  - "buffalo_l"
+  - "buffalo_m"
+  - "buffalo_s"
+  - "buffalo_sc"
+  - "antelopev2"
+
+# Detection settings
+det_size: [320, 320]
+det_provider: "CUDAExecutionProvider"
+
+# Filtering thresholds
+face_score_threshold: 1.0
+
+# Seeds
+random_seed: 42

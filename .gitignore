@@ -1,26 +1,39 @@
-# Python
+# Python bytecode
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 
-# Environments
+# Environments (never push these)
 face_env/
 venv/
 env/
-.env
+.venv/
 
-# Datasets and large files
+# Datasets (too large for git)
 datasets/
-dlib_models/
-face_eval_pipeline/data/
 face_eval_pipeline/orl_faces/
-face_eval_pipeline/results/embeddings/
+face_eval_pipeline/data/
+
+# Embedding files (binary, generated output)
+*.pkl
+
+# Large downloaded archives and build files
+face_eval_pipeline/cmake-*/
 face_eval_pipeline/*.tar.bz2
 face_eval_pipeline/*.tar.gz
-face_eval_pipeline/cmake-*/
-*.pkl
-*.mat
+face_eval_pipeline/dlib-*/
+
+# Results (generated; keep json but not embeddings)
+face_eval_pipeline/results/embeddings/
 
 # Logs
 *.log
+
+# MATLAB metadata (too large, comes with dataset)
+*.mat
+
+# Editor
+.vscode/
+*.swp
+dlib_models/

@@ -1,0 +1,9 @@
+numpy
+opencv-python
+insightface
+onnxruntime-gpu
+tqdm
+scikit-learn
+matplotlib
+scipy
+pyyaml
