@@ -19,10 +19,7 @@ results_dir:    "face_eval_pipeline/results"
 
 # Model list
 models:
-  - "buffalo_l"
   - "buffalo_m"
-  - "buffalo_s"
-  - "buffalo_sc"
   - "antelopev2"
 
 # Detection settings

@@ -22,6 +22,7 @@ import scipy.io
 import onnxruntime as ort
 from pathlib import Path
 from insightface.app import FaceAnalysis
+from tqdm import tqdm
 
 MODELS = ["buffalo_l", "buffalo_m", "buffalo_s", "buffalo_sc", "antelopev2"]
 
@@ -195,7 +196,7 @@ def main():
             
             print(f"    Total probe set for {db}: {total_p} images")
             
-            for idx, (p, identity) in enumerate(probes, 1):
+            for idx, (p, identity) in enumerate(tqdm(probes, desc=f"Extracting {m} on {db}"), 1):
                 if p.name in gallery_files:
                     continue # Skip images used in Gallery
                     
@@ -210,9 +211,6 @@ def main():
                     if identity not in emb_dict:
                         emb_dict[identity] = {}
                     emb_dict[identity][p.name] = face.normed_embedding.astype(np.float32)
-
-                if idx % 2000 == 0:
-                    print(f"      Processed {idx}/{total_p} ...")
                     
             with open(out_file, 'wb') as f:
                 pickle.dump(emb_dict, f)

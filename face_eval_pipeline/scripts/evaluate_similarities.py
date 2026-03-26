@@ -14,6 +14,7 @@ import pickle
 import json
 import numpy as np
 from pathlib import Path
+from tqdm import tqdm
 
 MODELS = ["buffalo_l", "buffalo_m", "buffalo_s", "buffalo_sc", "antelopev2"]
 DATASETS = ["ORL", "IMDB", "IMFDB"]
@@ -93,7 +94,7 @@ def main():
             correct = 0
             total = 0
             
-            for p in probes:
+            for p in tqdm(probes, desc=f"Evaluating {m} on {db_name}"):
                 true_id = p['identity']
                 # We strictly evaluate probes that have a corresponding identity in the gallery!
                 if true_id not in valid_identities:
