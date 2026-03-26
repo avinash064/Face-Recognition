@@ -1,6 +1,6 @@
 # Face Recognition Evaluation Pipeline using InsightFace 🎯
 
-A production-ready, multi-model face recognition evaluation pipeline using SCRFD face detection, ArcFace embeddings, and pure cosine similarity matching — evaluated across 3 diverse datasets.
+A production-ready, multi-model face recognition evaluation pipeline using SCRFD face detection, ArcFace embeddings, and pure cosine similarity matching  evaluated across 3 diverse datasets.
 
 ## Features
 
